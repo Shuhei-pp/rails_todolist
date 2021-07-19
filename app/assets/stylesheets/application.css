@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* header
+    ------------------------------- */
+header {
+    background-color: #000000;
+    height: 60px;
+}
+
+.header_h1{
+    color:rgb(255, 255, 255);
+    margin-bottom: 0%;
+    float: left;
+}
+
+.header_content{
+    float: right;
+}
+/* header
+    ------------------------------- */
+
+.main{
+    background: linear-gradient(#52d6c5,#ffffff);
+    padding-top: 50px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding: 10px 0px;
+    width:250px;
+    float: left;
+}
+
+.clear_float{
+    clear:left;
+}
+
+.flash{
+    height: 70px;
+    background-color: salmon;
+}
+
+.flash>p{
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*table*/
+.display{
+    width: 900px;
+    margin: auto;
+}
+
+table{
+    border-color:black;
+
+}
+
+.cell{
+    padding: 10px 20px;
+}
+
+.user_edit_table>table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*pagenation*/
+.pagenation{
+    padding-top:40px ;
+    text-align: center;
+}
+
+/*form*/
+.form{
+    height: 600px;
+    width: 50%;
+    padding-top: 100px;
+}
+
+.form-content{
+    padding: 10px;
+}
+.form_edit_content{
+    text-align: center;
+}
+/*edit*/
+.edit_display{
+    height: 900px;
+}
+
+/* footer
+    ------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #888888;
+}
+
+
+
+/* login.html
+    ------------------------------- */
+    

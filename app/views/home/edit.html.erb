@@ -1,0 +1,39 @@
+<div class="edit_display">
+    <div class="w-50 mx-auto form">
+    <h1>Edit</h1>
+        <%= form_tag("/home/#{@edit.id}/edit")do%>
+            <div class="w-50 mx-auto form-inline form-content" >
+                <label>Content:</label>
+                <input type="text" class="form-control"name="content"value="<%=@edit.content%>">
+            </div>
+            <p class="text-center pt-3">Limit</p>
+            <div class="form-inline w-50 mx-auto form-content">
+                <label>年:</label>
+                <input type="text" class="form-control" name= "y" value="<%=@edit.year%>">
+            </div>
+            <div class="form-inline w-50 mx-auto form-content">
+                <label>月:</label>
+                <input type="text"class="form-controll"name="m"value="<%=@edit.manth%>">
+            </div>
+            <div class="form-inline w-50 mx-auto form-content">
+                <label>日:</label>
+                <input type="text" class="form-controll" name ="d" value="<%=@edit.day%>">
+            </div>
+
+            <div class="form-inline w-50 mx-auto form-content">
+                <label>Progress:</label>
+                <select class="custom-select" name="progress" value="<%=@edit.progress%>">
+                    <option>Not yet</option>
+                    <option>Doing</option>
+                    <option>Complete</option>
+                </select>
+            </div>
+
+            <div class="form-inline w-50 mx-auto form-content">
+                <label>Creater:</label>
+                <input type="text" class="form-control"name="create"value="<%=@edit.creater%>">
+            </div>
+                
+            <input type ="submit" value = "Submit"class="form-group form-inline mx-auto">
+        <%end%>
+    </div>

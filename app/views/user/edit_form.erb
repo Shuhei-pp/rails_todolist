@@ -1,0 +1,24 @@
+<div style="height:200px"></div>
+
+<%=form_tag("/user/#{@user.id}/edit")do%>
+    <div class="form_edit_content">
+        name:<input name="name"value="<%=@user.name%>"></div>
+    <div class="form_edit_content">
+        email:<input name="email"value="<%=@user.email%>">
+    </div>
+    <div class="form_edit_content">
+        password:
+    <input name="password"value="<%=@user.password%>"></div>
+    <div class="form_edit_content">
+        admin:<select name = "admin">
+            <option></option>
+            <option>admin</option>
+        </select>
+    </div>
+    <div class="form_edit_content">
+        <input type="submit">
+    </div>
+<%end%>
+
+
+<div style="height:200px"></div>

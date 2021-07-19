@@ -1,0 +1,37 @@
+<div style="height:200px"></div>
+<div class ="user_edit_table"> 
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>user_id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password</th>
+            <th>admin</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        <%@users.each do |user|%>
+            <tr>
+                <td><%=user.id%></td>
+                <td><%=user.name%></td>
+                <td><%=user.email%></td>
+                <td><%=user.password%></td>
+                <td><%=user.admin%></td>
+                <td><%=link_to("edit","/user/#{user.id}/edit")%></td>
+                <td><a class =delete data-id="/user/<%=user.id%>/delete">delete</a></td>
+            </tr>
+        <%end%>
+    </table>
+<div>
+<div style="height:200px"></div>
+<script>
+
+    $(function() {
+        $('.delete').click(function(){
+            if (window.confirm("本当に削除しますか？")) {
+                window.open($(this).data('id'), "Delete now...");
+            }
+        })
+    });
+
+</script>
