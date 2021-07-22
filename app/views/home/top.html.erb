@@ -3,6 +3,8 @@
 
 <body>
     
+
+
     <div class = "display">
         <table border="1" class =" table-hover table-dark">
             <tr class="thead-dark">
@@ -81,6 +83,16 @@
             <input type ="submit" value = "Submit"class="form-group form-inline mx-auto">
         <%end%>
     </div>
+
+
+    <div class="input_sql" style = "text-align: center">
+        <%= form_tag("/home/sql") do%>
+            <input type="text" style="width:30%" name="sql">
+            <input type="submit"value="SQL" >
+        <%end%>
+    <div>
+
+    <div style="height:200px"></div>
     
     <script>
     console.log("<%=@contents.count%>")

@@ -47,4 +47,14 @@ class HomeController < ApplicationController
     redirect_to("/home/top")
   end
 
+  def output_sql
+    sql = params[:sql]
+    res = ActiveRecord::Base.connection.execute(sql)
+    
+    res.each do |record|
+      puts record
+    end 
+
+  end
+
 end

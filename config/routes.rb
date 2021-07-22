@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'home/:id/edit'=>"home#edit"
   post 'home/:id/edit' => "home#edit_save"
   post 'edit'=>"home#edit"
+  post 'home/sql' => "home#output_sql"
 
   get 'login' =>"user#login_form"
   post 'user/login' =>"user#login"
