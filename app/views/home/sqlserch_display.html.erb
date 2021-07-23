@@ -1,0 +1,39 @@
+<head>
+</head>
+
+<body>
+    
+
+
+    <div class = "display">
+        <table border="1" class =" table-hover table-dark">
+            <tr class="thead-dark">
+                <th class="cell">id</th>
+                <th class="cell">Content</th>
+                <th class="cell">Status</th>
+                <th class="cell">Limit</th>
+                <th class="cell">Creater</th>
+                <th class="cell">Created_at</th>
+                <th class="cell">Delete</th>
+                <th class="cell">Edit</th>
+            </tr>
+            <% @contents_k.each do |content|%>
+                <tr>
+                    <td class="cell"><%=content["id"]%></td>
+                    <td class="cell"><%=content["content"]%></td>
+                    <td class="cell"><%=content["progress"]%></td>
+                    
+                    <td class="cell"><%="#{content["year"]}年 #{content["manth"]}月 #{content["day"]}日"%></td>
+                    <td class="cell"><%=content["creater"]%></td>
+                    <td class="cell"><%=content["created_at"]%></td>
+                    <td class="cell"><a class = "delete_button" data-id = "/home/<%=content["id"]%>/delete" href="#">Delete</a></td>
+                    <td class="cell"><%= link_to("Edit","/home/#{content["id"]}/edit")%></td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+
+    <div style="width:50%; margin:30px auto">
+        <%= paginate @contents_k%>
+    </div>
+</body>

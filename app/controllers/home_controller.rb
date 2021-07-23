@@ -49,11 +49,15 @@ class HomeController < ApplicationController
 
   def output_sql
     sql = params[:sql]
-    res = ActiveRecord::Base.connection.execute(sql)
-    
-    res.each do |record|
+    res = ActiveRecord::Base.connection.select_all(sql).to_a #to_aでハッシュ化
+
+    @contents_k = Kaminari.paginate_array(res).page(params[:page]).per(5)
+
+    @contents_k.each do|record|
       puts record
-    end 
+    end
+
+  render "home/sqlserch_display"
 
   end
 

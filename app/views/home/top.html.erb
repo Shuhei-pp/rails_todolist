@@ -86,8 +86,8 @@
 
 
     <div class="input_sql" style = "text-align: center">
-        <%= form_tag("/home/sql") do%>
-            <input type="text" style="width:30%" name="sql">
+        <%= form_tag("/home/sql",method: :get)do%>
+            <textarea type="text" style="width:30%; height:" name="sql"></textarea>
             <input type="submit"value="SQL" >
         <%end%>
     <div>
