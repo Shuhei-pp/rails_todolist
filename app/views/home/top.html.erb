@@ -88,7 +88,7 @@
     <div class="input_sql" style = "text-align: center">
         <%= form_tag("/home/sql",method: :get)do%>
             <textarea type="text" style="width:30%; height:" name="sql" id="sql_textbox"></textarea>
-            <input type="submit"value="SQL" >
+            <button type="submit">SQL</button>
         <%end%>
         <button onclick="sql_autofill('SELECT ')">SELECT</button>
         <button onclick="sql_autofill('FROM posts')">FROM</button>
